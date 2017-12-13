@@ -12,6 +12,7 @@ __How to use__
 
 ```js
 import VueSignCanvas from 'vue-sign-canvas'
+require('vue-sign-canvas/dist/vue-sign-canvas.min.css')
 Vue.component('VueSignCanvas', VueSignCanvas)
 
 const options = {
@@ -21,8 +22,14 @@ const options = {
   shadowWidth: 10
 }
 
+function saveResult (data) {
+
+}
+function clear () {
+
+}
 <div>
-  <VueSignCanvas :options="options" />
+  <VueSignCanvas :options="options" @result="saveResult" @clear="clear" />
 <div>
 ```
 __options__

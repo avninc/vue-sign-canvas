@@ -1,6 +1,6 @@
 {
   "name": "vue-sign-canvas",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Vue signature component",
   "author": "Lujiab",
   "private": false,
@@ -74,6 +74,10 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitoneman/vue-sign-canvas"
   },
   "engines": {
     "node": ">= 4.0.0",
