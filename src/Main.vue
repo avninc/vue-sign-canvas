@@ -14,16 +14,27 @@ export default {
       options: {
         // height: window.screen.availHeight - 200,
         // canvasBackgroundColor: '#000',
-        brushColor: 'rgb(168,17,139)',
-        brushWidth: 10,
+        // brushColor: '#f00',
+        // brushColor: 'rgb(168,17,139)',
+        brushWidth: 20,
         shadowEnable: false,
-        shadowWidth: 10
+        shadowWidth: 10,
+        brushType: 'ink'
       }
     }
   },
   methods: {
     save: function(data) {
-      alert(data)
+      this.downloadFile(data)
+    },
+    downloadFile(url) {
+      var aLink = document.createElement('a')
+      aLink.href = url
+      aLink.download = 'text.png'
+      aLink.id = 'img1'
+      document.body.appendChild(aLink)
+      document.getElementById('img1').click()
+      document.getElementById('img1').remove()
     },
     getColor: function Color() {
       this.r = Math.floor(Math.random() * 255)

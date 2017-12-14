@@ -16,10 +16,14 @@ require('vue-sign-canvas/dist/vue-sign-canvas.min.css')
 Vue.component('VueSignCanvas', VueSignCanvas)
 
 const options = {
+  width: 500,
+  height: 500,
   brushColor: '#000',
   brushWidth: 10,
   shadowEnable: false,
-  shadowWidth: 10
+  shadowWidth: 10,
+  canvasBackgroundColor: '#fff',
+  brushType: 'ink'
 }
 
 function saveResult (data) {
@@ -38,11 +42,11 @@ __options__
 | :---: | :----: | :----: | :----: |
 | brushColor | string | '#000' | set brush color |
 | brushWidth | number | 10     | set brush width |
+| brushType | string | default('ink','crayon','marker') | set shadow color
 | width | number | window.screen.availWidth | set canvas width |
 | height | number | window.screen.availWidth | set canvas height |
 | shadowEnable | boolean | false | set brush shadow enable or not |
 | shadowWidth | number | 10 | set shadow width
 | shadowColor | string | null | set shadow color
-
 
 
