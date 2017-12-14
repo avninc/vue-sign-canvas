@@ -1,6 +1,6 @@
 <template>
   <div>
-    <App :options="options"></App>
+    <App :options="options" @result="save"></App>
     <button class="btn" @click="changeColor">随机更换颜色</button>
   </div>
 </template>
@@ -12,6 +12,8 @@ export default {
   data: () => {
     return {
       options: {
+        // height: window.screen.availHeight - 200,
+        // canvasBackgroundColor: '#000',
         brushColor: 'rgb(168,17,139)',
         brushWidth: 10,
         shadowEnable: false,
@@ -21,7 +23,7 @@ export default {
   },
   methods: {
     save: function(data) {
-      console.log(data)
+      alert(data)
     },
     getColor: function Color() {
       this.r = Math.floor(Math.random() * 255)
@@ -42,9 +44,23 @@ export default {
 </script>
 
 <style>
+body {
+  padding: 0;
+  margin: 0;
+  /* background: #000; */
+}
 .btn {
   position: absolute;
   top: 10px;
   right: 10px;
+  padding: 6px 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 14px;
 }
+/* .vueSignCanvas__btn {
+  bottom: -40px;
+  top: auto!important;
+} */
 </style>
