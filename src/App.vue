@@ -2,8 +2,8 @@
   <div class="vueSignCanvas">
     <canvas id="vueSignCanvas-c" style="width: 100%;height: 100%"></canvas>
     <div class="vueSignCanvas__btn">
-      <button @click="clear">清空</button>
-      <button @click="save">保存</button>
+      <button @click="clear">Clear</button>
+      <button @click="save">Save</button>
     </div>
   </div>
 </template>
